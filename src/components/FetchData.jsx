@@ -30,7 +30,7 @@ export const FetchData = () => {
           <div className="carousel-item active">
             <img
               src="https://images.unsplash.com/photo-1414115880398-afebc3d95efc?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-              className="d-block w-100"
+              className="d-block w-100 h-50"
               alt="..."
             />
             <div className="carousel-caption d-none d-md-block">
@@ -43,10 +43,11 @@ export const FetchData = () => {
           <div className="carousel-item">
             <img
               src="https://images.unsplash.com/photo-1414115880398-afebc3d95efc?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-              className="d-block w-100"
+              className="d-block w-100h-50"
               alt="..."
-              style={cove}
+              style={{ objectFit: "cover" }}
             />
+            ;
             <div className="carousel-caption d-none d-md-block">
               <h5>Second slide label</h5>
               <p>
@@ -57,8 +58,9 @@ export const FetchData = () => {
           <div className="carousel-item">
             <img
               src="https://images.unsplash.com/photo-1431492299426-2ea1ce429cc0?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-              className="d-block w-100"
+              className="d-block w-100h-50"
               alt="..."
+              style={{ objectFit: "cover" }}
             />
             <div className="carousel-caption d-none d-md-block">
               <h5>Third slide label</h5>
