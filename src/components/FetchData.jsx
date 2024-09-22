@@ -1,95 +1,77 @@
-// import React, { useEffect, useState } from "react";
-// import axios, { Axios } from "axios";
-// export const FetchData = () => {
-//   const [albums, setAlbums] = useState([]);
-
-//   useEffect(() => {
-//     const getData = async () => {
-//       const res = await axios.get(
-//         `https://jsonplaceholder.typicode.com/albums`
-//       );
-//       setAlbums(res.data);
-//     };
-//     getData();
-//   }, []);
-//   return (
-//     <>
-//       <div id="carouselExample" className="carousel slide">
-//         {albums.map((album) => (
-//           <div className="carousel-inner">
-//             <div className="carousel-item active">
-//               <p>{album.id}</p>
-//               <p>{album.userId}</p>
-//               <p>{album.title}</p>
-//             </div>
-//           </div>
-//         ))}
-
-//         <button
-//           className="carousel-control-prev"
-//           type="button"
-//           data-bs-target="#carouselExample"
-//           data-bs-slide="prev"
-//         >
-//           <span
-//             className="carousel-control-prev-icon"
-//             aria-hidden="true"
-//           ></span>
-//           <span className="visually-hidden">Previous</span>
-//         </button>
-//         <button
-//           className="carousel-control-next"
-//           type="button"
-//           data-bs-target="#carouselExample"
-//           data-bs-slide="next"
-//         >
-//           <span
-//             className="carousel-control-next-icon"
-//             aria-hidden="true"
-//           ></span>
-//           <span className="visually-hidden">Next</span>
-//         </button>
-//       </div>
-//     </>
-//   );
-// };
-import React, { useEffect, useState } from "react";
-import axios from "axios";
+import React from "react";
 
 export const FetchData = () => {
-  const [albums, setAlbums] = useState([]);
-
-  useEffect(() => {
-    const getData = async () => {
-      const res = await axios.get(
-        `https://jsonplaceholder.typicode.com/albums`
-      );
-      setAlbums(res.data);
-    };
-    getData();
-  }, []);
-
   return (
     <>
-      <div id="carouselExample" className="carousel slide" data-ride="carousel">
+      <div id="carouselExampleCaptions" className="carousel slide">
+        <div className="carousel-indicators">
+          <button
+            type="button"
+            data-bs-target="#carouselExampleCaptions"
+            data-bs-slide-to="0"
+            className="active"
+            aria-current="true"
+            aria-label="Slide 1"
+          ></button>
+          <button
+            type="button"
+            data-bs-target="#carouselExampleCaptions"
+            data-bs-slide-to="1"
+            aria-label="Slide 2"
+          ></button>
+          <button
+            type="button"
+            data-bs-target="#carouselExampleCaptions"
+            data-bs-slide-to="2"
+            aria-label="Slide 3"
+          ></button>
+        </div>
         <div className="carousel-inner">
-          {albums.map((album, index) => (
-            <div
-              className={`carousel-item ${index === 0 ? "active" : ""}`} // Only the first item is active
-              key={album.id}
-            >
-              <div className="d-flex flex-column align-items-center bg-danger">
-                <h5>Album ID: {album.id}</h5>
-                <h6>User ID: {album.userId}</h6>
-                <p>{album.title}</p>
-              </div>
+          <div className="carousel-item active">
+            <img
+              src="https://images.unsplash.com/photo-1414115880398-afebc3d95efc?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+              className="d-block w-100"
+              alt="..."
+            />
+            <div className="carousel-caption d-none d-md-block">
+              <h5>First slide label</h5>
+              <p>
+                Some representative placeholder content for the first slide.
+              </p>
             </div>
-          ))}
+          </div>
+          <div className="carousel-item">
+            <img
+              src="https://images.unsplash.com/photo-1414115880398-afebc3d95efc?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+              className="d-block w-100"
+              alt="..."
+              style={cove}
+            />
+            <div className="carousel-caption d-none d-md-block">
+              <h5>Second slide label</h5>
+              <p>
+                Some representative placeholder content for the second slide.
+              </p>
+            </div>
+          </div>
+          <div className="carousel-item">
+            <img
+              src="https://images.unsplash.com/photo-1431492299426-2ea1ce429cc0?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+              className="d-block w-100"
+              alt="..."
+            />
+            <div className="carousel-caption d-none d-md-block">
+              <h5>Third slide label</h5>
+              <p>
+                Some representative placeholder content for the third slide.
+              </p>
+            </div>
+          </div>
         </div>
         <button
           className="carousel-control-prev"
           type="button"
-          data-bs-target="#carouselExample"
+          data-bs-target="#carouselExampleCaptions"
           data-bs-slide="prev"
         >
           <span
@@ -101,7 +83,7 @@ export const FetchData = () => {
         <button
           className="carousel-control-next"
           type="button"
-          data-bs-target="#carouselExample"
+          data-bs-target="#carouselExampleCaptions"
           data-bs-slide="next"
         >
           <span
@@ -111,6 +93,7 @@ export const FetchData = () => {
           <span className="visually-hidden">Next</span>
         </button>
       </div>
+      ;
     </>
   );
 };
