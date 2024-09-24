@@ -58,7 +58,7 @@ const App = () => {
       />
 
       <button className="btn btn-info" onClick={handleSubmit}>
-        Submit
+        Register
       </button>
       <div>
         <div>
